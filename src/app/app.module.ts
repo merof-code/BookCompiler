@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EditorModule, TINYMCE_SCRIPT_SRC  } from '@tinymce/tinymce-angular';
 import { ProjectComponent } from './project/project.component';
-import { BookBrowserComponent } from './book-browser/book-browser.component';
-import { RichEditorComponent } from './rich-editor/rich-editor.component';
-import { ProjectsComponent } from './projects/projects.component'
+import { BookBrowserComponent } from './features/book-browser/book-browser.component';
+import { RichEditorComponent } from './features/rich-editor/rich-editor.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProjectsComponent } from './projects/projects.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    EditorModule
+    EditorModule,
+    HttpClientModule,
   ],
   providers: [
     { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }

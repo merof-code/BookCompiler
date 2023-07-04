@@ -1,5 +1,17 @@
 # BookCompiler
 
+
+structure
+
+home -> projects
+
+projects
+  project-list
+    browser-component
+      post
+
+mentions
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
 
 ## Development server
