@@ -1,7 +1,12 @@
-<tr>
-  <td>Name {{name}}</td>
-  <td>Posts</td>
-  <td>Pages</td>
-  <td>Pages per post avg</td>
-  <td>sections</td>
-</tr>
+<div class="container mx-auto my-3" [routerLink]="['/br', project?.id]">
+  <div class="border border-gray-300 rounded p-4">
+    <div class="flex justify-between">
+      <div class="text-lg font-semibold">{{project?.name}}</div>
+      <div class="flex">
+        <div class="text-lg mx-1">{{name}}</div>
+        <div class="text-lg">{{project?.id}}</div>
+      </div>
+    </div>
+    <div class="mt-2 text-gray-500">{{project?.description || '--'}}</div>
+  </div>
+</div>
