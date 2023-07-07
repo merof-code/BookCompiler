@@ -16,6 +16,8 @@ import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { JwtService } from './core/services/jwt.service';
 import { UserService } from './core/services/user.service';
+import { BreadcrumbsComponent } from './features/breadcrumbs/breadcrumbs.component';
+import { SectionViewComponent } from './features/section-view/section-view.component';
 
 // export function initAuth(jwtService: JwtService, userService: UserService) {
 //   return () => (jwtService.getToken() ? userService.getCurrentUser() : EMPTY);
@@ -26,7 +28,9 @@ import { UserService } from './core/services/user.service';
     ProjectComponent,
     BookBrowserComponent,
     RichEditorComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    BreadcrumbsComponent,
+    SectionViewComponent
   ],
   imports: [
     BrowserModule,

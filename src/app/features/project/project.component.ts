@@ -10,6 +10,5 @@ export class ProjectComponent implements OnInit {
   ngOnInit(): void {
     console.log('loaded')
   }
-  @Input() project:Project | undefined;
-  name: string = (Math.random() * 1000).toFixed(0).toString();
+  @Input() project!:Project;
 }
