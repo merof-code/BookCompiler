@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 import { SectionDisplay } from 'src/app/core/models/section_display.model';
 import { SectionsService } from 'src/app/core/services/sections.service';
 
@@ -20,6 +19,14 @@ export class BookBrowserComponent implements OnInit{
       }
       this.sectionService.getSectionBrowseInfo(+id).subscribe(x=> this.info = x);
     })
+  }
+
+  addSection() {
+    // FIXME: implement this
+  }
+
+  addPost() {
+    // FIXME: implement this
   }
 
 }

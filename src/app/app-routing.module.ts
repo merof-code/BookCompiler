@@ -6,7 +6,7 @@ import { BookBrowserComponent } from './features/book-browser/book-browser.compo
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
   { path: 'home', component: ProjectsComponent },
-  // { path: 'browse/:id', component: BookBrowserComponent},
+  { path: 'browse/:id', component: BookBrowserComponent},
   { path: 'br/:id', component: BookBrowserComponent},
 ];
 

@@ -1,9 +1,32 @@
-<p>book-browser works!</p>
-
-
-
-<!-- Breadcrumb -->
-<app-breadcrumbs [sections]="info.path"></app-breadcrumbs>
-
-
-<!-- {{info$ | async | json}} -->
+<div class="w-full">
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl py-2">Sections</h1>
+    <form class="w-full mx-64" data-controller="search-sections-form" data-search-sections-form-target="form"
+      data-div="sections" action="/sections/list" accept-charset="UTF-8" method="get">
+      <div class="relative w-full">
+        <!-- FIXME: make this form actually work, or move to a component -->
+        <input class="border border-gray-400 rounded pl-10 w-full" autocomplete="off"
+          placeholder="search by section name (no less then 3 chars)" data-action="input->search-sections-form#search"
+          type="text" name="search_field" id="search_field" />
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <i class="fa fa-search text-gray-400"></i>
+        </div>
+      </div>
+    </form>
+    <button (click)="addSection()" class="rounded-lg py-2 px-5 flex-shrink-0 w-fit bg-blue-600 text-white block font-medium mx-1
+    transition-colors hover:bg-blue-500 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-100">
+      <i class="fa-solid fa-plus pr-2"></i> New section
+    </button>
+    <button (click)="addPost()" class="rounded-lg py-2 px-5 flex-shrink-0 w-fit bg-blue-600 text-white block font-medium mx-1 
+      transition-colors hover:bg-blue-500 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-100">
+      <i class="fa-solid fa-plus pr-2"></i> New post
+    </button>
+  
+  </div>
+  <div id="sections ml-2">
+    <app-breadcrumbs [sections]="info.path"></app-breadcrumbs>
+    <app-section-list *ngFor="let section of info.sections" [section]="section"></app-section-list>
+    <div id="posts" class="min-w-full"></div>
+    <!-- FIXME: add posts display -->
+  </div>
+</div>
