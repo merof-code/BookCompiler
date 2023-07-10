@@ -18,6 +18,8 @@ import { JwtService } from './core/services/jwt.service';
 import { UserService } from './core/services/user.service';
 import { BreadcrumbsComponent } from './features/breadcrumbs/breadcrumbs.component';
 import { SectionListComponent } from './features/section-list/section-list.component';
+import { PostListViewComponent } from './features/post-list-view/post-list-view.component';
+import { PostViewComponent } from './features/post-view/post-view.component';
 
 // export function initAuth(jwtService: JwtService, userService: UserService) {
 //   return () => (jwtService.getToken() ? userService.getCurrentUser() : EMPTY);
@@ -30,7 +32,9 @@ import { SectionListComponent } from './features/section-list/section-list.compo
     RichEditorComponent,
     ProjectsComponent,
     BreadcrumbsComponent,
-    SectionListComponent
+    SectionListComponent,
+    PostListViewComponent,
+    PostViewComponent
   ],
   imports: [
     BrowserModule,

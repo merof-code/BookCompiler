@@ -1,0 +1,13 @@
+<div class="p-1 flex" (dblclick)="doubleClick($event)" (click)="singleClick($event)">
+  <div class="p-1  justify-between hover:bg-slate-100  flex-grow flex">
+    <div>
+      <i class="fa-regular fa-pen-to-square pr-2 text-gray-500"></i>
+      <span>{{post.name}}</span>
+    </div>
+  </div>
+  <a class="px-5 py-1 hover:bg-slate-200">
+    <!-- FIXME: make this button work, when it is hovered, make the main el also hovered, and the other way around, but this button is lighter when other element is hover-->
+    <i class="fas fa-file-pen"></i>
+  </a>
+</div>
+<!-- FIXME: possibly make this a single thing for both post list element and section -->

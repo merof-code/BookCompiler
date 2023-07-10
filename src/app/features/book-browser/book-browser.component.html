@@ -26,7 +26,6 @@
   <div id="sections ml-2">
     <app-breadcrumbs [sections]="info.path"></app-breadcrumbs>
     <app-section-list *ngFor="let section of info.sections" [section]="section"></app-section-list>
-    <div id="posts" class="min-w-full"></div>
-    <!-- FIXME: add posts display -->
+    <app-post-list-view *ngFor="let post of info.posts" [post]="post"></app-post-list-view>
   </div>
 </div>
