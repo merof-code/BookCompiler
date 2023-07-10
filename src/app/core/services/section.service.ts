@@ -1,16 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Project } from '../models/project.model';
+import { SectionDisplay } from '../models/section_display.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectsService {
+export class SectionService {
 
   constructor(private http: HttpClient) { }
 
-  getProjects(): Observable<Project[]> {
-    return this.http.get<Project[]>('/projects');
+  getSectionBrowseInfo(id:number): Observable<SectionDisplay> {
+    return this.http.get<SectionDisplay>('/sections/' + id)
   }
 }

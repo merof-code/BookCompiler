@@ -1,0 +1,5 @@
+<p>post-edit works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <app-rich-editor [control]="editorContentControl"></app-rich-editor>
+  <input type="submit" value="Submit">
+</form>

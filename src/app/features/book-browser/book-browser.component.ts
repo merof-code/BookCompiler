@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SectionDisplay } from 'src/app/core/models/section_display.model';
-import { SectionsService } from 'src/app/core/services/sections.service';
+import { SectionService } from 'src/app/core/services/section.service';
 
 @Component({
   selector: 'app-book-browser',
@@ -10,7 +10,7 @@ import { SectionsService } from 'src/app/core/services/sections.service';
 })
 export class BookBrowserComponent implements OnInit{
   info!: SectionDisplay;
-  constructor(private route: ActivatedRoute, private sectionService: SectionsService) {}
+  constructor(private route: ActivatedRoute, private sectionService: SectionService) {}
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id');
