@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 @import '~@fortawesome/fontawesome-free/css/all.css';
+
+
+// FIXME: all this down should live in rich text view component only, but it does not want to work there.
 @import 'tinymce/skins/content/default/content.min.css';
 
 
