@@ -7,7 +7,8 @@ import { PostEditComponent } from './features/posts/post-edit/post-edit.componen
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
-  { path: 'home', component: ProjectsComponent },
+  { path: 'home', component: ProjectsComponent},
+  { path: 'projects', component: ProjectsComponent },
   { path: 'browse/:id', component: BookBrowserComponent},
   { path: 'br/:id', component: BookBrowserComponent},
   { path: 'post/:id', component: PostViewComponent},

@@ -2,6 +2,7 @@ import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { EditorModule, TINYMCE_SCRIPT_SRC  } from '@tinymce/tinymce-angular';
 import { ProjectComponent } from './features/project/project.component';
@@ -16,13 +17,14 @@ import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { JwtService } from './core/services/jwt.service';
 import { UserService } from './core/services/user.service';
+
 import { BreadcrumbsComponent } from './features/breadcrumbs/breadcrumbs.component';
 import { SectionListComponent } from './features/sections/section-list/section-list.component';
 import { PostListViewComponent } from './features/posts/post-list-view/post-list-view.component';
 import { PostViewComponent } from './features/posts/post-view/post-view.component';
 import { PostEditComponent } from './features/posts/post-edit/post-edit.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { RichDisplayComponent } from './features/editor/rich-display/rich-display.component';
+import { NewProjectComponent } from './features/new-project/new-project.component';
 
 // export function initAuth(jwtService: JwtService, userService: UserService) {
 //   return () => (jwtService.getToken() ? userService.getCurrentUser() : EMPTY);
@@ -39,7 +41,8 @@ import { RichDisplayComponent } from './features/editor/rich-display/rich-displa
     PostListViewComponent,
     PostViewComponent,
     PostEditComponent,
-    RichDisplayComponent
+    RichDisplayComponent,
+    NewProjectComponent
   ],
   imports: [
     BrowserModule,

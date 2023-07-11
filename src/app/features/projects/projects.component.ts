@@ -9,9 +9,14 @@ import { ProjectService } from 'src/app/core/services/project.service';
   styles: [],
 })
 export class ProjectsComponent {
+  isModalOpen: boolean = true;
   projectList$:Observable<Project[]>;
   constructor(private projectService:ProjectService) {
-    this.projectList$ = projectService.getProjects();
+    this.projectList$ = projectService.get();
   }
 
+  newProject: boolean = false;
+  createProject() {
+    this.newProject = true;
+  }
 }
