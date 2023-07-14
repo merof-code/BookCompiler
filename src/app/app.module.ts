@@ -5,10 +5,10 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { EditorModule, TINYMCE_SCRIPT_SRC  } from '@tinymce/tinymce-angular';
-import { ProjectComponent } from './features/project/project.component';
+import { ProjectViewComponent } from './features/projects/project-view/project.component';
 import { BookBrowserComponent } from './features/book-browser/book-browser.component';
 import { RichEditorComponent } from './features/editor/rich-editor/rich-editor.component';
-import { ProjectsComponent } from './features/projects/projects.component';
+import { ProjectsComponent } from './features/projects/projects-list/projects.component';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { ApiInterceptor } from './core/interceptors/api.interceptor';
@@ -24,7 +24,7 @@ import { PostListViewComponent } from './features/posts/post-list-view/post-list
 import { PostViewComponent } from './features/posts/post-view/post-view.component';
 import { PostEditComponent } from './features/posts/post-edit/post-edit.component';
 import { RichDisplayComponent } from './features/editor/rich-display/rich-display.component';
-import { NewProjectComponent } from './features/new-project/new-project.component';
+import { NewProjectComponent } from './features/projects/new-project/new-project.component';
 
 // export function initAuth(jwtService: JwtService, userService: UserService) {
 //   return () => (jwtService.getToken() ? userService.getCurrentUser() : EMPTY);
@@ -32,7 +32,7 @@ import { NewProjectComponent } from './features/new-project/new-project.componen
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectComponent,
+    ProjectViewComponent,
     BookBrowserComponent,
     RichEditorComponent,
     ProjectsComponent,

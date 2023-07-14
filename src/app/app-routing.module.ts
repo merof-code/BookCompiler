@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProjectsComponent } from './features/projects/projects.component';
+import { ProjectsComponent } from './features/projects/projects-list/projects.component';
 import { BookBrowserComponent } from './features/book-browser/book-browser.component';
 import { PostViewComponent } from './features/posts/post-view/post-view.component';
 import { PostEditComponent } from './features/posts/post-edit/post-edit.component';
